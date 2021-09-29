@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Hello World Example</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script defer src="/js/sample.js"></script>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      } 
+      .b1{
+         
+          margin: 2rem;
+          border: 2px solid black;
+          max-width: 400px;
+          padding: 1.2rem;  
+          background-color: #ffffff;   
+          position: relative;  
+      }
+        
+      #psw{ 
+        height: 3rem;    
+        padding-left: 3rem;
+        width: 95%;
+        outline: none;
+        border: none;
+        border: 2px solid tomato;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+
+      }
+      span{
+          padding: 0.3rem;
+          position: absolute;
+          top: 35%;
+      }
+      .eye{
+          font-size: 1.3rem;
+      }
+
+      
+
+    
+    </style>
+
+</head>
+
+<body>
+
+    <div class="b1">
+        <span>
+            <i class="fa fa-eye-slash eye"></i>
+        </span>
+        <input type="password" name="" id="psw" placeholder="password">       
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".eye").click(function(){
+                if($(this).hasClass("fa fa-eye-slash"))
+                {
+                    $(this).attr({"class" : "fa fa-eye"});
+                     $("#psw").attr({"type" : "text"});
+                }
+                else
+                {
+                    $(this).attr({"class" : "fa fa-eye-slash"});
+                    $("#psw").attr({"type" : "password"});
+                }
+               
+            });
+        });
+    </script>
+</body>
+
+</html>
